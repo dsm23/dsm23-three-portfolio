@@ -1,0 +1,43 @@
+{
+  "projectName": "next-enterprise",
+  "projectOwner": "Blazity",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": ["README.md"],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "bmstefanski",
+      "name": "Bart Stefanski",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28964599?v=4",
+      "profile": "https://bstefanski.com/",
+      "contributions": ["code"]
+    },
+    {
+      "login": "jjablonski-it",
+      "name": "Jakub Jabłoński",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51968772?v=4",
+      "profile": "https://github.com/jjablonski-it",
+      "contributions": ["infra"]
+    },
+    {
+      "login": "neg4n",
+      "name": "Igor Klepacki",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57688858?v=4",
+      "profile": "https://neg4n.dev/",
+      "contributions": ["doc"]
+    },
+    {
+      "login": "dsm23",
+      "name": "David Murdcoh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16935587?v=4",
+      "profile": "https://davidmurdochportfolio.site/",
+      "contributions": ["code"]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": true,
+  "commitType": "docs"
+}

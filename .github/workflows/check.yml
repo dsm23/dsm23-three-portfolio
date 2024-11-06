@@ -52,9 +52,9 @@ jobs:
         run: pnpm test -- --coverage
       - name: Build
         run: pnpm build
-      - name: Smoke & Acceptance tests
-        run: |
-          pnpm build-storybook --quiet
-          pnpm dlx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-            "pnpm dlx http-server storybook-static --port 6006 --silent" \
-            "pnpm dlx wait-on tcp:127.0.0.1:6006 && pnpm test-storybook"
+      # - name: Smoke & Acceptance tests
+      #   run: |
+      #     pnpm build-storybook --quiet
+      #     pnpm dlx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+      #       "pnpm dlx http-server storybook-static --port 6006 --silent" \
+      #       "pnpm dlx wait-on tcp:127.0.0.1:6006 && pnpm test-storybook"

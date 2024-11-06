@@ -5,14 +5,20 @@ export function middleware(request: NextRequest) {
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const cspHeader = `
     default-src 'self';
-    script-src 'self' 'nonce-${nonce}' 'strict-dynamic';
+    script-src 'self' 'nonce-${nonce}' 'unsafe-eval';
     style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data:;
+    connect-src 'self' data:
+      https://threejs-journey.com/resources/
+      https://www.gstatic.com/draco/
+      https://raw.githack.com/pmndrs/drei-assets/
+      https://raw.githubusercontent.com/pmndrs/drei-assets/;
     font-src 'self';
     object-src 'none';
     base-uri 'self';
     form-action 'self';
     frame-ancestors 'none';
+    worker-src 'self' blob:;
     upgrade-insecure-requests;
 `;
   // Replace newline characters and spaces

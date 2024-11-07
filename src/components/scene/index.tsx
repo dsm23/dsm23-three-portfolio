@@ -4,7 +4,9 @@ import {
   ContactShadows,
   Environment,
   Float,
+  Html,
   PresentationControls,
+  // Text,
   useGLTF,
 } from "@react-three/drei";
 
@@ -28,7 +30,38 @@ const Scene = () => {
         global
       >
         <Float rotationIntensity={0.4}>
-          <primitive object={laptop.scene} position-y={-1.2} />
+          <rectAreaLight
+            width={2.5}
+            height={1.65}
+            intensity={65}
+            color="#0284c7"
+            rotation={[-0.1, Math.PI, 0]}
+            position={[0, 0.55, -1.15]}
+          />
+
+          <primitive object={laptop.scene} position-y={-1.2}>
+            <Html
+              transform
+              wrapperClass="html-screen"
+              distanceFactor={1.17}
+              position={[0, 1.56, -1.4]}
+              rotation-x={-0.256}
+            >
+              <iframe src="https://www.davidmurdochportfolio.site" />
+            </Html>
+          </primitive>
+
+          {/* <Text
+            font="/Lexend-VariableFont_wght.ttf"
+            fontSize={1}
+            position={[2, 0.75, 0.75]}
+            rotation-y={-1.25}
+            maxWidth={2}
+            textAlign="center"
+            characters="acdhimoruv"
+          >
+            DAVID MURDOCH
+          </Text> */}
         </Float>
       </PresentationControls>
 

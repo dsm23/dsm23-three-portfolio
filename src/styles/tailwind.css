@@ -36,3 +36,11 @@ main {
 .canvas:active {
   cursor: grabbing;
 }
+
+.html-screen iframe {
+  width: 1024px;
+  height: 670px;
+  border: none;
+  border-radius: 1.25rem;
+  background: #000;
+}
